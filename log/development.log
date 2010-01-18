@@ -1,0 +1,1720 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (33.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (36.3ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDonations (20100118145153)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (14.5ms)[0m   [0mCREATE TABLE `donations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `donor` varchar(255), `channel` varchar(255), `desc` text, `committed` int(11), `pledged` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mDonation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.4ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'channel', 'description', 'donor')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Bilateral (to affected government)', 'In-kind: Donations of medicines and nutritional products', 'Abbott Laboratories')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 809, 'ADRA-Haiti', 'Emergency assistance', 'ADRA-Haiti')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25, 0, 'PIH', 'Humanitarian assistance', 'Advent Software')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25, 0, 'American RC', 'Humanitarian assistance', 'Air Products')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 15, 'IFRC', 'for victims of earthquake in Haiti; for the emergency appeal of the International Federation of Red Cross and Red Crescent Societies', 'Albanian Red Cross')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'American RC', 'Assist the victims of Haitis devastating earthquake', 'Alcoa Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'NGOs', 'in-kind: $1 million worth of eye drops and eye-related antibiotics and ointments: in partnership with Project Hope, AmeriCares, Direct Relief International and Heart to Heart', 'Alcon Laboratories')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 479, 'UNICEF', 'Humanitarian Response (SM099906)', 'Allocation of unearmarked funds by UNICEF')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 3, 'UNICEF', 'in kind - 2,500 kitchen kits and 5,000 1 litre bags of water; supplies to assist 10,000 people, including oral rehydration salts to combat deadly diarrhea episodes, water purifications tablets, tarpaulins and tents to provide temporary housing; blankets, emergency health kits, jerry cans and some other supplies', 'Allocation of unearmarked funds by UNICEF')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'WFP', 'in kind - seven logistics staff and three telecommunications staff to help support relief efforts through the activation of the Logistics and Telecommunications Clusters; Two Staff counsellors', 'Allocation of unearmarked funds by WFP')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'WFP', 'Emergency Operation in support of relief efforts', 'Allocation of unearmarked funds by WFP')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'WHO', 'in kind - 100,000 water purification tablets', 'Allocation of unearmarked funds by WHO')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 75, 'WHO', 'Emergency assistance(funds from WHO Rapid Response Account)', 'Allocation of unearmarked funds by WHO')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200, 'WHO', 'Emergency assistance to affected population', 'Allocation of unearmarked funds by WHO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(50, 0, 'American RC', 'Relief assistance', 'Allstate Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'American RC', 'Relief assistance', 'Altria Group')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 5 pallets of medical supplies', 'America Continental 2000')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250, 0, 'UN Agencies, NGOs and Red Cross', 'Relief assistance', 'American Express Company')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200, 'American RC', 'Assist communities impacted by todays earthquake in Haiti', 'American Red Cross')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5, 0, 'Americares', 'To be allocated to specific projects', 'Americares')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2, 0, 'Various', 'Aviating allocation to specific projects', 'Amgen')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'NGOs; Red Cross', 'Relief assistance for American Red Cross and SOS Children´s Villages', 'Amway')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'American RC', 'For Haitian Relief', 'Angel Network')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a planeload of medical equipment and relief supplies to Haiti', 'Argentina')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(163, 0, 'BRCS', 'Relief assistance', 'AstraZeneca')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'TSF', 'Emergency telecommunications', 'AT&T Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 899, 'IFRC', 'Humanitarian relief and reconstruction support to Haiti', 'Australia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 899, 'CDERA', 'For immdeiate life-saving support to those most affected by the earthquake', 'Australia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'WFP', 'WFP for special operations supporting logistics and communications', 'Australia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'NGOs', 'Humanitarian relief and reconstruction support to Haiti (Australian NGOs)', 'Australia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4, 'UN Agencies, NGOs and Red Cross', 'Emergency humanitarian relief and reconstruction assistance for those affected by the earthquake in Haiti', 'Australia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a medical team to Haiti to help its earthquake-stricken people', 'Bangladesh')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'Haiti Relief and Development Fund', 'Assistance for relief efforts', 'Bank of America Corporation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'American RC', 'Earthquake relief', 'Bank of America Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'NGOs; Red Cross', 'Immediate, acute-care and longer-term needs; support to ARC and CARE', 'Baxter International Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'Various', 'Medical equipment', 'Becton, Dickson and Company')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(550, 0, 'NGOs; Red Cross', 'Support to American Red Cross, U.S. Fund for UNICEF, AmeriCares, Catholic Medical Mission Board, Direct Relief International, Heart to Heart International, Partners in Health, Project HOPE, and Save the Children', 'Becton, Dickson and Company')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 651, 'Bilateral (to affected government)', 'in kind - Une soixantaine de personnes quipe B-Fast pour porter secours aux victimes du violent tremblement de terre une quipe d´intervention (mdicale avec un hpital de campagne (20 personnes); une quipe USAR (Urban Search and Rescue Team) de 33 personnes, avec quatre chiens pisteurs; une installation de purification de l´eau potable, avec deux accompagnateurs', 'Belgium')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'CRS', 'Awaiting allocation to specific projects', 'Bill and Melinda Gates Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'CRS', 'Relief assistance', 'Bill and Melinda Gates Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250, 'RC/Canada', 'Assistance to Red Cross effort', 'BMO Financial Group')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - blood and food to the victims of the earthquake.', 'Bolivia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Six flights of the Brazilian Air Force sent to Haiti, carrying personnel, food items, medications and an emergency portable hospital; Rescue team sent to Haiti, composed by fifty specialists in disaster relief, besides tools and rescue dogs', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5, 0, 'ERF (OCHA)', 'To contribute to the efforts underway to bring relief and emergency assistance to the Haitian population', 'Brazil')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(10, 0, 'Bilateral (to affected government)', 'Aid funds for Haiti earthquake response', 'Brazil')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'Bilateral (to affected government)', 'Local purchase of food, by the Brazilian Embassy in Port-au-Prince, for school feeding rehabilitation programmes in Haiti', 'Brazil')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'UNFPA', 'Humanitarian assistance', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 130, 'WFP', 'School feeding', 'Brazil')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250, 'FAO', 'Humanitarian assistance', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'BA', 'in kind - a relief aircraft to aid agencies travelling to Haiti', 'British Airways')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'Bilateral (to affected government)', 'Relief efforts to the people of Haiti', 'Cambodia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Campbell Soup CO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind: A Disaster Emergency Response Team deployed to Haiti; C-17 aircraft full of medical aid and a pair of search and rescue helicopters', 'Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(96, 0, 'MCIC', 'Emergency response efforts in Haiti (Province of Manitoba)', 'Canada')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(4, 0, 'Bilateral (to affected government)', 'Immediate aid including emergency shelter, medical services, food, relief items, water and sanitation services and protection', 'Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(48, 0, 'UN Agencies, NGOs and Red Cross', 'to match individual donations to charities intended to help the Caribbean nation recover from devastation caused by the temblor.', 'Canada')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 96, 'RC/Canada', 'Relief effort in Haiti (Nova Scotia)', 'Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 481, 'RC/Canada', 'Immediate medical and emergency support (British Columbia)', 'Canada')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 10, 'American RC', 'Provide supplies, technical assistance, efforts to reconnect families and reconstruct hospitals, schools, child care centers and neighborhoods', 'CareSource Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Bilateral (to affected government)', 'Immediate relief to Haiti following the widespread devastation caused by the powerful earthquake (potable water, food, medicines and temporary shelter, restoration of critical facilities and services)', 'Caribbean Development Bank')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'CARITAS', 'in kind - group of 7 experts', 'CARITAS')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 252, 'CARITAS', 'Emergency assistance to affected population', 'CARITAS')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200, 'ICRC', 'Relief efforts', 'Caterpillar, Inc.')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5, 0, 'CRS', 'To be allocated to specific projects', 'Catholic Relief Services')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 782, 'WFP', 'CERF rapid response grant to WFP: Common emergency telecommunication services to humanitarian community in Haiti (CERF 10-WFP-007)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 850, 'UNICEF', 'CERF rapid response grant to project: Emergency nutrition for children and women (CERF 10-CEF-004A)', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'IOM', 'CERF rapid response grant to project: Immediate shelter and NFIs assistance to vulnerable earthquake victims in Haiti (CERF 10-IOM-001)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'UNICEF', 'CERF rapid response grant to project: Provide access to safe water and sanitation facilities to families affected by the earthquake (CERF 10-CEF-004B)', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2, 'WFP', 'CERF rapid response grant to project: Provision of humanitarian air services in response to the earthquake in Haiti & Logistics augmentation and coordination of relief operation in response to the earthquake in Haiti (CERF 10-WFP-006)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2, 'WHO', 'CERF rapid response grant to WHO: Awaiting allocation to specific project - Haiti Earthquake Response 2010', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2, 'WFP', 'CERF rapid response grant to project: Food assistance to earthquake affected populations in Haiti (CERF 10-WFP-005)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 15, 'UN Agencies', 'CERF rapid response grant to UN agencies: Awaiting allocation to specific agencies/sectors/projects', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a 767 jet and a Hercules C-130 plane with medical assistance.', 'Chile')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - A 50-member rescue team; three sniffer dogs', 'China')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'RCSC', 'Emergency aid to affected population', 'China')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4, 'Bilateral (to affected government)', 'Humanitarian aid, including medicines, tents, food, emergency lights, clothing and water', 'China')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2, 0, 'Various', 'Aviating allocation to specific projects', 'Citigroup')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'American RC', 'Provide immediate relief and long-term support through supplies, technical and financial assistance, and other support to help those in need', 'Coca-Cola Company')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - flight with 600 kg of drugs, gloves, surgical masks, a military hospital with 7 military doctors able to perform complex surgeries and trauma management, 20 SAR experts (pairs man-dog), 3 satelite phones donated by the National Police, and 2000 kg of provisions for Colombian police men present in the area.', 'Colombia')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'WFP', 'Food aid', 'Colombia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25, 0, 'American RC', 'Emergency relief', 'Comcast Corp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25, 0, 'TSF', 'an emergency team with communications equipment to Haiti.', 'Comcast Corp')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(950, 0, 'Various', 'in kind - goods and services (free airtime for earthquake-related public-service announcements for the Red Cross and other organizations)', 'Comcast Corp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'American RC', 'To be allocated to specific projects', 'ConAgra Foods')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind: 30 doctors to add to its medical staff already in Haiti.', 'Cuba')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 288, 'UNICEF', 'Reconstruction of Water Infrastructure (91386/2010-ORS)', 'Czech Republic')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.3ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 194, 'Danchurchaid', 'Relief work', 'Danchurchaid')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(3, 0, 'ERF (OCHA)', 'Emergency Relief Response Fund (ERRF) Haiti [OCT 2844]', 'Denmark')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 96, 'SC - Denmark', 'Urgent relief (46.h.5.drk.)', 'Denmark')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 145, 'Danchurchaid', 'Urgent relief (46.h.5.drk.)', 'Denmark')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 145, 'Danish RC', 'Urgent relief (46.h.5.drk.)', 'Denmark')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 291, 'OCHA', 'OCHA country office in Haiti (46.haiti.5.b.) [OCT 2843]', 'Denmark')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'DEMA', 'UN Base Camp Module (46.H.5.BRS.)', 'Denmark')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'ERF (OCHA)', 'OCHA ERRF for Haiti (46.haiti.5.b.) [OCT 2842]', 'Denmark')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'CARITAS', 'First aid supplies, food, shelter and other basic necessities', 'Development and Peace')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Various', '45,000 pounds of food and emergency supplies', 'Diageo')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Digicel Group')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 420, 'DRI', 'in kind - 40-foot and 20-foot containers, containing essential medicines, supplies, and nutritionals', 'Direct Relief International')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'American RC', 'Aviating allocation to specific projects', 'Discover Financial Services')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - food, medicine medical aid, and rescue crews to Haiti; 20 technicians to help re-establish telecommunications, 12 disaster management specialists, 8 mobile clinics, 6 ambulances, a medical team water supplies and drugs.', 'Dominican Republic')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(4, 0, 'Bilateral (to affected government)', 'Assistencia destinada a los Centros de la Red Pblica de Salud, canalizados a travs de la Secretaria de Estado de Salud Pblica y Asistencia Social (SESPAS).', 'Dominican Republic')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'American RC', 'Assistance to emergency relief and rescue operations', 'Dow Chemical Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'American RC', 'Response to the earthquake', 'Eaton Corp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in-kind: search and rescue teams and 5 tons of food', 'Ecuador')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind: a SAR team of 12 members', 'El Salvador')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Various', 'Provision of complete GSM system, perform technical test of the system, provision of technical staff, provision of 1000 sim card for humanitarian community', 'Ericsson')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 92, 'ERB', 'Urgent relief to the victims of the earthquake', 'Estonia')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 230, 'IFRC', 'To help victims of the earhquake', 'Estonia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.3ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4, 'UN Agencies, NGOs and Red Cross', 'Commission Decision on the financing of primary emergency humanitarian Actions in Haiti from the general budget of the European Union (ECHO/HTI/BUD/2010/01000)', 'European Commission Humanitarian Aid Office')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2, 0, 'UN Agencies, NGOs and Red Cross', 'Awaiting allocation to specific projects', 'FedEx')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'OCHA', 'in kind - Two IT experts and IT module through UNOCHA/ UNDAC', 'Finland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 721, 'Finnchurchaid', 'Life saving activities/water + food', 'Finland')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Finland RC', 'Mobile clinic and personnel', 'Finland')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - Martinique : Un dtachement sauvetage dblaiement(65 pompiers, 5\nSAMU); accompagns dun dtachement de protection et dassistance (36 gendarmes)ont dcoll de Martinique bord de 3 CASA et dun A310 avec plusieurs dizaines de tonnes de matriel; Mtropole : Un deuxime dtachement sauvetage dblaiement (67 pompiers) accompagns\ndune quipe du centre de crise (7) et dune ONG (ACF, 6 personnes).\nL´installation d´un hpital de campagne est prvue Port au Prince. Ces\nappareils doivent galement vacuer des blesss vers la Martinique.', 'France')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'US Fund for UNICEF', 'Emergency assistance', 'General Electric')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'Aviating allocation to specific projects', 'General Electric')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'American RC', 'Emergency assistance', 'General Electric')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'General Motors')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.3ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'Various', 'Relief assistance', 'General Motors')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Assessment team deployed by the German Federal Agency for Technical Relief (THW) as well as an expert team with equipment for the supply of drinking water.', 'Germany')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 577, 'Bilateral (to affected government)', 'In-kind - Provision of drugs, medical supplies and non-food items in a Portuguese C-130 airplane to transport urgent humanitarian relief items (IS 97/Dasc/CGII/2010)', 'Germany')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 721, 'GTZ', 'Emergency Aid with food after the earthquake / new budget beside the project for the reconstruction and compansation of sensitivity, which started in December 2009 and continues until April 2012 (BMZ-No.: 2009.1989.4)', 'Germany')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 900, 'ICRC', 'To establish a center for basic health care in Port-au-Prince for a period of 3 months', 'Germany')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'NGOs', 'Health, water and sanitation, non-food items and food aid.', 'Germany')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'Various', 'Aid to quake victims', 'Go Daddy')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'GOAL', 'in kind - a team to assess the seriousness of the situation and to mobilise a response.', 'GOAL')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 360, 'GOAL', 'GOAL has allocated Euro 250,000 from its emergency fund as an immediate response', 'GOAL')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'Aviating allocation to specific projects', 'Goldman Sachs Group')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Google')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 290, 'WFP', 'Humanitarian assistance and emergency relief', 'Greece')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'Bilateral (to affected government)', 'Emergency relief', 'Grenada')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Bilateral (to affected government)', 'Emergency assistance', 'Guyana')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 217, 'HI', 'To be allocated to specific projects', 'Handicap International')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25, 0, 'CARE International', 'To be allocated to specific projects', 'Hanesbrands')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'American RC', 'Aid for the victims of earthquake', 'Home Depot Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - Icelandic International Search and Rescue Team (ICE-SAR) [35 search and rescue specialists, fully equipped and self sufficient for up to seven days in the field, with 10 metric tons of their own tools and equipment, three tons of water, tents, advanced communication equipment and have their own water purifying capability.]', 'Iceland')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(55, 0, 'WFP', 'Awaiting allocation to specific project/sector', 'Iceland')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 491, 'IFRC', 'Emergency assistance to affected population', 'IFRC Disaster Relief Emergency Fund')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5, 0, 'Bilateral (to affected government)', 'for immediate emergency relief in quake-devastated Haiti', 'India')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Bilateral (to affected government)', 'in kind - contingent of humanitarian workers (75 personnel, comprising 30 doctors, 10 rescuers, 10 electricity technicians, 25construction and telecommunication experts); 15 tents, 3 tons of medicine, 5 tons of food, 5 tons of baby and children kits, one ambulance, one truck and water purifying tool (No:044/POL-101/I/10)', 'Indonesia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200, 'Bilateral (to affected government)', 'Immediate emergency aid to help Haiti deal with the devastating earthquake (to provide food, potable water, medicines and temporary shelter to victims of natural disasters)', 'Inter-American Development Bank')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'RC/Haiti', 'in kind - 7 Emergency Response Units deployed: 1 Logistics, 1 Rapid Deployment Hospital, 1 IT/Telecom, 2 Relief/Shelter, and 2 Basic Health Care from American RC, Spanish RC, Benelux RC, Norwegian RC, Canadian RC, Swiss RC, French RC, German RC, Finnish RC); 2 Mobile Wat/San Modules deployed (from Spanish RC and French RC); 3,000 family kits already prepositioned in country', 'International Federation of Red Cross and Red Crescent Societies')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'Bilateral (to affected government)', 'Emergency assistance to Haiti; to assist it in dealing with the aftermath of the massive and devastating earthquake that has hit the country', 'International Monetary Fund')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'RC/Iran', '30 tonnes of humanitarian aid including food, tents and medicine to quake-ridden Haiti', 'Iran')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2, 0, 'UN Agencies, NGOs and Red Cross', 'Humanitarian assistance for the recent earthquake in Haiti', 'Ireland')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 360, 'IFRC', 'Emergency Relief (IFRC 10 01)', 'Ireland')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 36, 'Ireland RC', 'aid to Haiti from its Emergency Relief Fund to deal with the devastating earthquake which struck the country', 'Ireland Red Cross')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 144, 'Ireland RC', 'Emergency aid to Haiti', 'Ireland Red Cross')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a delegation which includes rescue forces, 40 doctors,24 nurses and representatives of the IDF Medical Corps to set up a hospital capable of treating 500 patients', 'Israel')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 133, 'WHO', 'in kind - 4 inter-agency emergency health kits (IEHK) without malaria module; 4 Post-exposure prophylaxis kits (PEP) supplementary module', 'Italy')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 721, 'IFRC', 'Emergency healthcare programme (MDRHT008)', 'Italy')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 738, 'WFP', 'To meet the emergency food needs of the populations affected', 'Italy')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - emergency medical team', 'Japan')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 327, 'Bilateral (to affected government)', 'in kind - emergency relief goods', 'Japan')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 5, 'UN Agencies and NGOs (details not yet provided)', 'Emergency grant aid', 'Japan')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'Aviating allocation to specific projects', 'Jefferies Group Inc')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250, 0, 'Red Cross', 'aid recovery efforts in Haiti', 'John Deere Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'MSF', 'Awaiting allocation to specific projects', 'Jolie-Pitt Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250, 'American RC', 'Relief efforts', 'Kellogg Corporation')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Bilateral (to affected government)', 'In-Kind: Relief goods worth $1 million.\nThe Korea International Cooperation Agency (KOICA) sent five relief workers to Haiti.', 'Korea, Republic of')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25, 0, 'American RC', 'To be allocated to specific projects', 'Kraft Foods Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 25, 'American RC', 'Help victims of the earthquake', 'Kraft Foods Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 125, 'PIH', 'Humanitarian Assistance', 'Lance Armstrong Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 125, 'MSF', 'Humanitarian assistance', 'Lance Armstrong Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'American RC', 'To be allocated to specific projects', 'Lowe\'s Cos Inc')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(150, 0, 'LWF', 'To deliver water containers and purification materials and temporary shelter items.', 'Lutheran World Relief')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72, 'Bilateral (to affected government)', 'in kind - search and rescue team (7 dogs + 11 canine search experts) plus 6 civil protection technical staff with localization material to Haiti', 'Luxembourg')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72, 'OTM', 'Emergency relief', 'Luxembourg')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72, 'Red Cross', 'Emergency relief', 'Luxembourg')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72, 'CARITAS', 'Emergency relief', 'Luxembourg')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 144, 'CARE International', 'Emergency relief', 'Luxembourg')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 290, 'WFP', 'Emergency relief', 'Luxembourg')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'UNICEF', 'Awaiting allocation to specific projects', 'Major League Baseball')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'MCC', 'Immediate needs', 'Mennonite Central Committee')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Mercy Corps', 'in kind - team to assess what the most pressing needs are in the earthquake-affected areas', 'Mercy Corps')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 15 to 20 tons of aid a day; hundreds of doctors, rescue workers, engineers and civil protection staff', 'Mexico')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 45,000 tons of aid to help earthquake-hit Haiti', 'Mexico')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(8, 0, 'UN Agencies', 'Assistance to be channeled through UN Agencies', 'Mexico')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'Cash and in-kind contributions awaiting allocation to specific projects', 'Microsoft')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72, 'IFRC', 'Humanitarian assistance (No22.14-201003903)', 'Monaco')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Bilateral (to affected government)', 'In kind - medical and pharmaceutical products products', 'Morocco')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 120, 'Muslim Aid', 'To provide much needed clean water, emergency shelters, medicines and food aid to the earthquake victims', 'Muslim Aid')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(242, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'National Bank of Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'Relief efforts for victims', 'National Basketball Association')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'PIH', 'Relief and recovery efforts to assist victims of earthquake', 'National Football League')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'American RC', 'Relief and recovery efforts to assist victims of earthquake', 'National Football League')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'UN Agencies, NGOs and Red Cross', 'Awaiting allocation to specific projects', 'NEM Insurance Company')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'In kind contribution in bottled water products', 'Nestle')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 60-member team with trained sniffer dogs', 'Netherlands')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2, 'UN Agencies, NGOs and Red Cross', 'Emergency aid', 'Netherlands')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(719, 0, 'UN Agencies and Red Cross', 'International relief efforts following the devastating earthquake in Haiti', 'New Zealand')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - special brigade to repair electric power lines that have been damaged by the earthquake; 31 military doctors of the Humanitarian Rescue Unit (URH) and humanitarian aid for the victims', 'Nicaragua')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250, 0, 'American RC', 'Aid to victims of earthquake', 'Northern Trust Corporation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 866, 'NRC', 'in kind - secondments to the UN', 'Norway')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Direktoratet for samfunnssikkerhet og beredskap', 'in kind - staff support to the UN', 'Norway')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Norway RC', 'Field hospital', 'Norway')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'NCA', 'in kind - tents and water equipments', 'Norway')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'PIH', 'Medical services for victims', 'Not on our Watch')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'Bilateral (to affected government)', 'Emergency relief', 'Organization of American States')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'PADF', 'in kind - additional experts to assist in the relief efforts; Shelter kits with tents, tarps, water purification tablets; Emergency relief supplies; Food; Medical supplies; Family tool kits, including shovels; Telecommunications equipment', 'Pan American Development Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - all the infrastructure required for the logistical coordination of cooperation that should be sent to Haiti; cargo plane carrying 22 rescue workers and four sniffer dogs, as well as 15 tons of food and medical supplies.', 'Panama')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Various', 'Aviating allocation to specific projects', 'Pepsi')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 54 tons of food and medicine to Haiti following Tuesday´s major earthquake in the island state', 'Peru')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - send medical teams in the quake-shattered Haiti.', 'Philippines')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'Plan', 'To be allocated to specific projects', 'Plan International')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1, 0, 'Plan UK', 'To provide water, food, hygiene packs and counselling to children and adults in the various makeshift camps in Port-Au-Prince, Jacmel and other quake-affected regions of the devastated Caribbean island', 'Plan UK')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Group of 54 rescuers as well as 10 specially trained dogs plus 4 tonnes of equipment', 'Poland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'ICRC', 'Assistance to population affected by earthquake (1/2010)', 'Poland')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Bilateral (to affected government)', 'In kind - Humanitarian assistance to the victims of the earthquake through rescue and health personal (2/2010)', 'Poland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'UN Agencies, NGOs and Red Cross', 'To be allocated to specific projects', 'Presbyterian Disaster Assistance')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'NC/USA', 'Private contribution (Alyssa Milano)', 'Private (individuals & organisations)')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 114, 'WFP', 'Food aid', 'Private (individuals & organisations)')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250, 'PIH', 'Humanitarian assistance (from Madonna)', 'Private (individuals & organisations)')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 480, 'BA', 'Rescue effort in Haiti from British Airways Change for Good programme, which is funded through onboard donations by passengers.', 'Private (individuals & organisations)')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'MSF', 'Humanitarian assistance (private contribution Sandra Bullock)', 'Private (individuals & organisations)')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'American RC', 'Assistance for relief efforts (private contribution from Giselle Bundchen)', 'Private (individuals & organisations)')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Various', 'Two million packets of PUR water purifier to be distributed through its Children´s Safe Drinking Water partners', 'Procter & Gamble Inc.')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250, 'Various', 'Support to Partners in Health and other relief organizations', 'Rogers Communications')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 700, 'Bilateral (to affected government)', 'in kind - Deploy Global Radius technology in the affected region (one cargo aircraft with BO-194 or BK-117 helicopters onboard) to support deployment of field mission of UNDAC and to assess the consequences of the disaster and conduct search, rescue and evacuation operations', 'Russian Federation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'Various', 'Emergency relief', 'Safeway Inc')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'Various', 'Emergency relief', 'Safeway Inc')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 139, 'SC', 'To be allocated to specific projects', 'Save the Children')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(242, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Scotiabank')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(50, 0, 'ERF (OCHA)', 'In support of the international communitys humanitarian relief efforts for earthquake-hit Haiti.', 'Singapore')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72, 'IFRC', 'Emergency relief after earthquake', 'Slovenia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(133, 0, 'Bilateral (to affected government)', 'Relief effort in Haiti', 'South Africa')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - A team of 40 experts in rescue operations and dogs;A plane with a team of doctors and health specialists, and another plane with medical equipment are departing from Madrid on Jan 14. 50T of humanitarian aid (tents, blankets, medical kits, water and sanitation material, etc.)', 'Spain')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4, 'Bilateral (to affected government)', 'Emergency aidHumanitarian assistance to the victims of the earthquake through rescue and health personal and provision and distribution of shelters, hygiene kits, water and complementary supplies,sanitary modules, medicines and medical supplies', 'Spain')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Spanish RC', 'in kind - relief materials kitchen kits, jerry cans, vehicles to facilitate access', 'Spanish Red Cross')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 400, 'Oxfam America', 'Earthquake relief', 'State Street Corporation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Provide military and police personnel for Haiti; filling four (4) feet container with drinking water, blankets and rice to provide assistance in the initial stages', 'Suriname')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(278, 0, 'Church of Sweden', 'emergency operations', 'Sweden')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(13, 0, 'UN Agencies', 'to be allocated to specific agencies, projects,sectors', 'Sweden')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 61, 'MSB', 'IT experts to assist the UNDAC', 'Sweden')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 687, 'RC/Sweden', 'Urgent Relief', 'Sweden')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 836, 'ERF (OCHA)', 'ERRF for Haiti (OCT 2484)', 'Sweden')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2, 'MSB', 'Urgent Relief', 'Sweden')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - dispatched an inter-disciplinary expert team (7 persons) to carry out a needs-assessment and a second team with 10 experts in the fields of water and sanitation, health and shelter. A freight plane with 40 t in-kind urgent humanitarian assistance (shelter material, medicine and medical material, emergency kits) is planned to leave on 15-01-2010.', 'Switzerland')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Bilateral (to affected government)', 'Emergency aid', 'Switzerland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - rescue team', 'Taiwan (Province of China)')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5, 0, 'Bilateral (to affected government)', 'Humanitarian assistance', 'Taiwan (Province of China)')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'American RC', 'Aviating allocation to specific projects', 'Target')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(20, 0, 'Bilateral (to affected government)', 'Humanitarian fund for Haiti in the wake of the powerful quake', 'Thailand')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(166, 0, 'American RC', 'Aid to victims of earthquake', 'Toyota Motor Corporation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(166, 0, 'MSF', 'Aid to victims of earthquake', 'Toyota Motor Corporation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(166, 0, 'SC', 'Aid to victims of earthquake', 'Toyota Motor Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Turkey RC', 'in kind - dispatched a team to Haiti, comprising an emergency management expert and a psychologist; various humanitarian assistance goods on the ground and distribute them to the people in need.', 'Turkey')[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', '400,000 packs on instant rice, 30 tons of corn meal, 50,000 blankets, 10,000 boxes bottled water, 150,000 anti-inflammatories, 5,000 body bags, other canned food and medical supplies', 'Tzu Chi Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 101, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/Canada')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/Korea (Republic of)')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 34, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/Norway')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 320, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/United Kingdom')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/USA (US Fund for UNICEF)')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500, 0, 'WFP', 'Awaiting allocation to specific project/sector', 'Unilever')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Provision of sheltering materials to the people who lost their homes', 'United Arab Emirates')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 64-strong UK search and rescue team with heavy lifting equipment', 'United Kingdom')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(8, 0, 'UN Agencies and NGOs (details not yet provided)', 'Humanitarian relief work in Haiti', 'United Kingdom')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 96, 'CHASE OT', 'Humanitarian Assesment (201483-102)', 'United Kingdom')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'IFRC', 'Immediate Humanitarian Relief (201483-107)', 'United Kingdom')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1, 'Various', 'To address urgent humanitarian and reconstruction needs', 'United Nations Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - teams including up to 72 people, six search and rescue dogs and up to 48 tons of rescue equipment; USAID disaster experts who will help assess the situation in Haiti.', 'United States of America')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(45, 0, 'UN Agencies, NGOs and Red Cross', 'Earthquake relief efforts in Haiti (unallocated balance from orig pledge of US$100 mn.)', 'United States of America')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 49, 'USAID', 'Administrative costs', 'United States of America')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'USAID', 'Initial assistance for the implemetnation of an emergency response program', 'United States of America')[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 13, 'USDHHS', 'Health (USAID/OFDA)', 'United States of America')[0m
+  [4;36;1mSQL (42.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 18, 'WFP', 'Food aid', 'United States of America')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 23, 'USFEMA', 'Search and rescue (USAID/OFDA)', 'United States of America')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'UN Agencies, NGOs and Red Cross', 'In-kind services for shipment of needed supplies', 'UPS Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'UN Agencies, NGOs and Red Cross', 'Relief supplies', 'UPS Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - rescue team of 5 military staff and 5 specialized canines', 'Uruguay')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - C-130 plane with 49 people on board and 14 tons of tools, medicine, potable water, and non-perishable food items; a team of doctors, rescue workers, military and firemen to help with the search and rescue efforts', 'Venezuela')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'WV', 'Aid for the victims of earthquake', 'Verizon Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50, 'Food for the Poor', 'Aid for the victims of earthquake', 'Verizon Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 40, 'BRCS', 'Support immediate needs, including clean water, sanitation, healthcare and shelter', 'Vodafone Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'American RC', 'in kind - pre-packaged food kits', 'Walmart Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500, 'American RC', 'Emergency relief efforts in Haiti', 'Walmart Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100, 'American RC', 'Humanitarian aid', 'Walt Disney Corporation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'American RC', 'To be allocated to specific projects', 'Wells Fargo & CO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250, 0, 'UN Agencies, NGOs and Red Cross', 'To be allocated to specific projects', 'Western Union Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100, 0, 'Bilateral (to affected government)', 'Emergency aid', 'World Bank')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100118145153')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `donations`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `donations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (13.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (28.1ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateDonations (20100118145153)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (11.8ms)[0m   [0mCREATE TABLE `donations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `donor` varchar(255), `channel` varchar(255), `desc` text, `committed` int(11), `pledged` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mDonation Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.3ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'channel', 'description', 'donor')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'Bilateral (to affected government)', 'In-kind: Donations of medicines and nutritional products', 'Abbott Laboratories')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 809281, 'ADRA-Haiti', 'Emergency assistance', 'ADRA-Haiti')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25000, 0, 'PIH', 'Humanitarian assistance', 'Advent Software')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25000, 0, 'American RC', 'Humanitarian assistance', 'Air Products')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 15000, 'IFRC', 'for victims of earthquake in Haiti; for the emergency appeal of the International Federation of Red Cross and Red Crescent Societies', 'Albanian Red Cross')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'American RC', 'Assist the victims of Haitis devastating earthquake', 'Alcoa Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'NGOs', 'in-kind: $1 million worth of eye drops and eye-related antibiotics and ointments: in partnership with Project Hope, AmeriCares, Direct Relief International and Heart to Heart', 'Alcon Laboratories')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 479205, 'UNICEF', 'Humanitarian Response (SM099906)', 'Allocation of unearmarked funds by UNICEF')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 3400000, 'UNICEF', 'in kind - 2,500 kitchen kits and 5,000 1 litre bags of water; supplies to assist 10,000 people, including oral rehydration salts to combat deadly diarrhea episodes, water purifications tablets, tarpaulins and tents to provide temporary housing; blankets, emergency health kits, jerry cans and some other supplies', 'Allocation of unearmarked funds by UNICEF')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'WFP', 'in kind - seven logistics staff and three telecommunications staff to help support relief efforts through the activation of the Logistics and Telecommunications Clusters; Two Staff counsellors', 'Allocation of unearmarked funds by WFP')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'WFP', 'Emergency Operation in support of relief efforts', 'Allocation of unearmarked funds by WFP')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'WHO', 'in kind - 100,000 water purification tablets', 'Allocation of unearmarked funds by WHO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 75000, 'WHO', 'Emergency assistance(funds from WHO Rapid Response Account)', 'Allocation of unearmarked funds by WHO')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200000, 'WHO', 'Emergency assistance to affected population', 'Allocation of unearmarked funds by WHO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(50000, 0, 'American RC', 'Relief assistance', 'Allstate Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'American RC', 'Relief assistance', 'Altria Group')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 5 pallets of medical supplies', 'America Continental 2000')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250000, 0, 'UN Agencies, NGOs and Red Cross', 'Relief assistance', 'American Express Company')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200000, 'American RC', 'Assist communities impacted by todays earthquake in Haiti', 'American Red Cross')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5000000, 0, 'Americares', 'To be allocated to specific projects', 'Americares')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2000000, 0, 'Various', 'Aviating allocation to specific projects', 'Amgen')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'NGOs; Red Cross', 'Relief assistance for American Red Cross and SOS Children´s Villages', 'Amway')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'American RC', 'For Haitian Relief', 'Angel Network')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a planeload of medical equipment and relief supplies to Haiti', 'Argentina')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(163150, 0, 'BRCS', 'Relief assistance', 'AstraZeneca')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'TSF', 'Emergency telecommunications', 'AT&T Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 899281, 'IFRC', 'Humanitarian relief and reconstruction support to Haiti', 'Australia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 899281, 'CDERA', 'For immdeiate life-saving support to those most affected by the earthquake', 'Australia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1348921, 'WFP', 'WFP for special operations supporting logistics and communications', 'Australia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1348921, 'NGOs', 'Humanitarian relief and reconstruction support to Haiti (Australian NGOs)', 'Australia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4496403, 'UN Agencies, NGOs and Red Cross', 'Emergency humanitarian relief and reconstruction assistance for those affected by the earthquake in Haiti', 'Australia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a medical team to Haiti to help its earthquake-stricken people', 'Bangladesh')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'Haiti Relief and Development Fund', 'Assistance for relief efforts', 'Bank of America Corporation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'American RC', 'Earthquake relief', 'Bank of America Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'NGOs; Red Cross', 'Immediate, acute-care and longer-term needs; support to ARC and CARE', 'Baxter International Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'Various', 'Medical equipment', 'Becton, Dickson and Company')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(550000, 0, 'NGOs; Red Cross', 'Support to American Red Cross, U.S. Fund for UNICEF, AmeriCares, Catholic Medical Mission Board, Direct Relief International, Heart to Heart International, Partners in Health, Project HOPE, and Save the Children', 'Becton, Dickson and Company')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 651876, 'Bilateral (to affected government)', 'in kind - Une soixantaine de personnes quipe B-Fast pour porter secours aux victimes du violent tremblement de terre une quipe d´intervention (mdicale avec un hpital de campagne (20 personnes); une quipe USAR (Urban Search and Rescue Team) de 33 personnes, avec quatre chiens pisteurs; une installation de purification de l´eau potable, avec deux accompagnateurs', 'Belgium')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'CRS', 'Awaiting allocation to specific projects', 'Bill and Melinda Gates Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'CRS', 'Relief assistance', 'Bill and Melinda Gates Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250000, 'RC/Canada', 'Assistance to Red Cross effort', 'BMO Financial Group')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - blood and food to the victims of the earthquake.', 'Bolivia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Six flights of the Brazilian Air Force sent to Haiti, carrying personnel, food items, medications and an emergency portable hospital; Rescue team sent to Haiti, composed by fifty specialists in disaster relief, besides tools and rescue dogs', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5000000, 0, 'ERF (OCHA)', 'To contribute to the efforts underway to bring relief and emergency assistance to the Haitian population', 'Brazil')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(10000000, 0, 'Bilateral (to affected government)', 'Aid funds for Haiti earthquake response', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'Bilateral (to affected government)', 'Local purchase of food, by the Brazilian Embassy in Port-au-Prince, for school feeding rehabilitation programmes in Haiti', 'Brazil')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'UNFPA', 'Humanitarian assistance', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 130000, 'WFP', 'School feeding', 'Brazil')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250000, 'FAO', 'Humanitarian assistance', 'Brazil')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'BA', 'in kind - a relief aircraft to aid agencies travelling to Haiti', 'British Airways')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'Bilateral (to affected government)', 'Relief efforts to the people of Haiti', 'Cambodia')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200000, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Campbell Soup CO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind: A Disaster Emergency Response Team deployed to Haiti; C-17 aircraft full of medical aid and a pair of search and rescue helicopters', 'Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(96339, 0, 'MCIC', 'Emergency response efforts in Haiti (Province of Manitoba)', 'Canada')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(4816956, 0, 'Bilateral (to affected government)', 'Immediate aid including emergency shelter, medical services, food, relief items, water and sanitation services and protection', 'Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(48169557, 0, 'UN Agencies, NGOs and Red Cross', 'to match individual donations to charities intended to help the Caribbean nation recover from devastation caused by the temblor.', 'Canada')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 96339, 'RC/Canada', 'Relief effort in Haiti (Nova Scotia)', 'Canada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 481696, 'RC/Canada', 'Immediate medical and emergency support (British Columbia)', 'Canada')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 10000, 'American RC', 'Provide supplies, technical assistance, efforts to reconnect families and reconstruct hospitals, schools, child care centers and neighborhoods', 'CareSource Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Bilateral (to affected government)', 'Immediate relief to Haiti following the widespread devastation caused by the powerful earthquake (potable water, food, medicines and temporary shelter, restoration of critical facilities and services)', 'Caribbean Development Bank')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'CARITAS', 'in kind - group of 7 experts', 'CARITAS')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 252525, 'CARITAS', 'Emergency assistance to affected population', 'CARITAS')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200000, 'ICRC', 'Relief efforts', 'Caterpillar, Inc.')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5000000, 0, 'CRS', 'To be allocated to specific projects', 'Catholic Relief Services')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 782460, 'WFP', 'CERF rapid response grant to WFP: Common emergency telecommunication services to humanitarian community in Haiti (CERF 10-WFP-007)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 850292, 'UNICEF', 'CERF rapid response grant to project: Emergency nutrition for children and women (CERF 10-CEF-004A)', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'IOM', 'CERF rapid response grant to project: Immediate shelter and NFIs assistance to vulnerable earthquake victims in Haiti (CERF 10-IOM-001)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1201075, 'UNICEF', 'CERF rapid response grant to project: Provide access to safe water and sanitation facilities to families affected by the earthquake (CERF 10-CEF-004B)', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2000000, 'WFP', 'CERF rapid response grant to project: Provision of humanitarian air services in response to the earthquake in Haiti & Logistics augmentation and coordination of relief operation in response to the earthquake in Haiti (CERF 10-WFP-006)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2000000, 'WHO', 'CERF rapid response grant to WHO: Awaiting allocation to specific project - Haiti Earthquake Response 2010', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2893426, 'WFP', 'CERF rapid response grant to project: Food assistance to earthquake affected populations in Haiti (CERF 10-WFP-005)', 'Central Emergency Response Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 15000000, 'UN Agencies', 'CERF rapid response grant to UN agencies: Awaiting allocation to specific agencies/sectors/projects', 'Central Emergency Response Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a 767 jet and a Hercules C-130 plane with medical assistance.', 'Chile')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - A 50-member rescue team; three sniffer dogs', 'China')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'RCSC', 'Emergency aid to affected population', 'China')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4405286, 'Bilateral (to affected government)', 'Humanitarian aid, including medicines, tents, food, emergency lights, clothing and water', 'China')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2000000, 0, 'Various', 'Aviating allocation to specific projects', 'Citigroup')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'American RC', 'Provide immediate relief and long-term support through supplies, technical and financial assistance, and other support to help those in need', 'Coca-Cola Company')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - flight with 600 kg of drugs, gloves, surgical masks, a military hospital with 7 military doctors able to perform complex surgeries and trauma management, 20 SAR experts (pairs man-dog), 3 satelite phones donated by the National Police, and 2000 kg of provisions for Colombian police men present in the area.', 'Colombia')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'WFP', 'Food aid', 'Colombia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25000, 0, 'American RC', 'Emergency relief', 'Comcast Corp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25000, 0, 'TSF', 'an emergency team with communications equipment to Haiti.', 'Comcast Corp')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(950000, 0, 'Various', 'in kind - goods and services (free airtime for earthquake-related public-service announcements for the Red Cross and other organizations)', 'Comcast Corp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'American RC', 'To be allocated to specific projects', 'ConAgra Foods')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind: 30 doctors to add to its medical staff already in Haiti.', 'Cuba')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 288600, 'UNICEF', 'Reconstruction of Water Infrastructure (91386/2010-ORS)', 'Czech Republic')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 194175, 'Danchurchaid', 'Relief work', 'Danchurchaid')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(3883495, 0, 'ERF (OCHA)', 'Emergency Relief Response Fund (ERRF) Haiti [OCT 2844]', 'Denmark')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 96957, 'SC - Denmark', 'Urgent relief (46.h.5.drk.)', 'Denmark')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 145434, 'Danchurchaid', 'Urgent relief (46.h.5.drk.)', 'Denmark')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 145434, 'Danish RC', 'Urgent relief (46.h.5.drk.)', 'Denmark')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 291262, 'OCHA', 'OCHA country office in Haiti (46.haiti.5.b.) [OCT 2843]', 'Denmark')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1163476, 'DEMA', 'UN Base Camp Module (46.H.5.BRS.)', 'Denmark')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1650485, 'ERF (OCHA)', 'OCHA ERRF for Haiti (46.haiti.5.b.) [OCT 2842]', 'Denmark')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'CARITAS', 'First aid supplies, food, shelter and other basic necessities', 'Development and Peace')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Various', '45,000 pounds of food and emergency supplies', 'Diageo')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5000000, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Digicel Group')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 420000, 'DRI', 'in kind - 40-foot and 20-foot containers, containing essential medicines, supplies, and nutritionals', 'Direct Relief International')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'American RC', 'Aviating allocation to specific projects', 'Discover Financial Services')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - food, medicine medical aid, and rescue crews to Haiti; 20 technicians to help re-establish telecommunications, 12 disaster management specialists, 8 mobile clinics, 6 ambulances, a medical team water supplies and drugs.', 'Dominican Republic')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(4976499, 0, 'Bilateral (to affected government)', 'Assistencia destinada a los Centros de la Red Pblica de Salud, canalizados a travs de la Secretaria de Estado de Salud Pblica y Asistencia Social (SESPAS).', 'Dominican Republic')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'American RC', 'Assistance to emergency relief and rescue operations', 'Dow Chemical Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'American RC', 'Response to the earthquake', 'Eaton Corp')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in-kind: search and rescue teams and 5 tons of food', 'Ecuador')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind: a SAR team of 12 members', 'El Salvador')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Various', 'Provision of complete GSM system, perform technical test of the system, provision of technical staff, provision of 1000 sim card for humanitarian community', 'Ericsson')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 92352, 'ERB', 'Urgent relief to the victims of the earthquake', 'Estonia')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 230880, 'IFRC', 'To help victims of the earhquake', 'Estonia')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.3ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4329000, 'UN Agencies, NGOs and Red Cross', 'Commission Decision on the financing of primary emergency humanitarian Actions in Haiti from the general budget of the European Union (ECHO/HTI/BUD/2010/01000)', 'European Commission Humanitarian Aid Office')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2000000, 0, 'UN Agencies, NGOs and Red Cross', 'Awaiting allocation to specific projects', 'FedEx')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'OCHA', 'in kind - Two IT experts and IT module through UNOCHA/ UNDAC', 'Finland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 721501, 'Finnchurchaid', 'Life saving activities/water + food', 'Finland')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1082251, 'Finland RC', 'Mobile clinic and personnel', 'Finland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - Martinique : Un dtachement sauvetage dblaiement(65 pompiers, 5\nSAMU); accompagns dun dtachement de protection et dassistance (36 gendarmes)ont dcoll de Martinique bord de 3 CASA et dun A310 avec plusieurs dizaines de tonnes de matriel; Mtropole : Un deuxime dtachement sauvetage dblaiement (67 pompiers) accompagns\ndune quipe du centre de crise (7) et dune ONG (ACF, 6 personnes).\nL´installation d´un hpital de campagne est prvue Port au Prince. Ces\nappareils doivent galement vacuer des blesss vers la Martinique.', 'France')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'US Fund for UNICEF', 'Emergency assistance', 'General Electric')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Various', 'Aviating allocation to specific projects', 'General Electric')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'American RC', 'Emergency assistance', 'General Electric')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'General Motors')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.3ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'Various', 'Relief assistance', 'General Motors')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Assessment team deployed by the German Federal Agency for Technical Relief (THW) as well as an expert team with equipment for the supply of drinking water.', 'Germany')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 577201, 'Bilateral (to affected government)', 'In-kind - Provision of drugs, medical supplies and non-food items in a Portuguese C-130 airplane to transport urgent humanitarian relief items (IS 97/Dasc/CGII/2010)', 'Germany')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 721501, 'GTZ', 'Emergency Aid with food after the earthquake / new budget beside the project for the reconstruction and compansation of sensitivity, which started in December 2009 and continues until April 2012 (BMZ-No.: 2009.1989.4)', 'Germany')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 900000, 'ICRC', 'To establish a center for basic health care in Port-au-Prince for a period of 3 months', 'Germany')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1264502, 'NGOs', 'Health, water and sanitation, non-food items and food aid.', 'Germany')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'Various', 'Aid to quake victims', 'Go Daddy')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'GOAL', 'in kind - a team to assess the seriousness of the situation and to mobilise a response.', 'GOAL')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 360750, 'GOAL', 'GOAL has allocated Euro 250,000 from its emergency fund as an immediate response', 'GOAL')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Various', 'Aviating allocation to specific projects', 'Goldman Sachs Group')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Google')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 290000, 'WFP', 'Humanitarian assistance and emergency relief', 'Greece')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'Bilateral (to affected government)', 'Emergency relief', 'Grenada')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'Bilateral (to affected government)', 'Emergency assistance', 'Guyana')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 217657, 'HI', 'To be allocated to specific projects', 'Handicap International')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25000, 0, 'CARE International', 'To be allocated to specific projects', 'Hanesbrands')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'American RC', 'Aid for the victims of earthquake', 'Home Depot Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - Icelandic International Search and Rescue Team (ICE-SAR) [35 search and rescue specialists, fully equipped and self sufficient for up to seven days in the field, with 10 metric tons of their own tools and equipment, three tons of water, tents, advanced communication equipment and have their own water purifying capability.]', 'Iceland')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(55000, 0, 'WFP', 'Awaiting allocation to specific project/sector', 'Iceland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 491265, 'IFRC', 'Emergency assistance to affected population', 'IFRC Disaster Relief Emergency Fund')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5000000, 0, 'Bilateral (to affected government)', 'for immediate emergency relief in quake-devastated Haiti', 'India')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'Bilateral (to affected government)', 'in kind - contingent of humanitarian workers (75 personnel, comprising 30 doctors, 10 rescuers, 10 electricity technicians, 25construction and telecommunication experts); 15 tents, 3 tons of medicine, 5 tons of food, 5 tons of baby and children kits, one ambulance, one truck and water purifying tool (No:044/POL-101/I/10)', 'Indonesia')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 200000, 'Bilateral (to affected government)', 'Immediate emergency aid to help Haiti deal with the devastating earthquake (to provide food, potable water, medicines and temporary shelter to victims of natural disasters)', 'Inter-American Development Bank')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'RC/Haiti', 'in kind - 7 Emergency Response Units deployed: 1 Logistics, 1 Rapid Deployment Hospital, 1 IT/Telecom, 2 Relief/Shelter, and 2 Basic Health Care from American RC, Spanish RC, Benelux RC, Norwegian RC, Canadian RC, Swiss RC, French RC, German RC, Finnish RC); 2 Mobile Wat/San Modules deployed (from Spanish RC and French RC); 3,000 family kits already prepositioned in country', 'International Federation of Red Cross and Red Crescent Societies')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000000, 0, 'Bilateral (to affected government)', 'Emergency assistance to Haiti; to assist it in dealing with the aftermath of the massive and devastating earthquake that has hit the country', 'International Monetary Fund')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'RC/Iran', '30 tonnes of humanitarian aid including food, tents and medicine to quake-ridden Haiti', 'Iran')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(2886003, 0, 'UN Agencies, NGOs and Red Cross', 'Humanitarian assistance for the recent earthquake in Haiti', 'Ireland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 360750, 'IFRC', 'Emergency Relief (IFRC 10 01)', 'Ireland')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 36075, 'Ireland RC', 'aid to Haiti from its Emergency Relief Fund to deal with the devastating earthquake which struck the country', 'Ireland Red Cross')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 144300, 'Ireland RC', 'Emergency aid to Haiti', 'Ireland Red Cross')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - a delegation which includes rescue forces, 40 doctors,24 nurses and representatives of the IDF Medical Corps to set up a hospital capable of treating 500 patients', 'Israel')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 133000, 'WHO', 'in kind - 4 inter-agency emergency health kits (IEHK) without malaria module; 4 Post-exposure prophylaxis kits (PEP) supplementary module', 'Italy')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 721501, 'IFRC', 'Emergency healthcare programme (MDRHT008)', 'Italy')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 738644, 'WFP', 'To meet the emergency food needs of the populations affected', 'Italy')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - emergency medical team', 'Japan')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 327154, 'Bilateral (to affected government)', 'in kind - emergency relief goods', 'Japan')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 5000000, 'UN Agencies and NGOs (details not yet provided)', 'Emergency grant aid', 'Japan')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Various', 'Aviating allocation to specific projects', 'Jefferies Group Inc')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250000, 0, 'Red Cross', 'aid recovery efforts in Haiti', 'John Deere Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'MSF', 'Awaiting allocation to specific projects', 'Jolie-Pitt Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250000, 'American RC', 'Relief efforts', 'Kellogg Corporation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Bilateral (to affected government)', 'In-Kind: Relief goods worth $1 million.\nThe Korea International Cooperation Agency (KOICA) sent five relief workers to Haiti.', 'Korea, Republic of')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(25000, 0, 'American RC', 'To be allocated to specific projects', 'Kraft Foods Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 25000, 'American RC', 'Help victims of the earthquake', 'Kraft Foods Foundation')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 125000, 'PIH', 'Humanitarian Assistance', 'Lance Armstrong Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 125000, 'MSF', 'Humanitarian assistance', 'Lance Armstrong Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'American RC', 'To be allocated to specific projects', 'Lowe\'s Cos Inc')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(150000, 0, 'LWF', 'To deliver water containers and purification materials and temporary shelter items.', 'Lutheran World Relief')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72150, 'Bilateral (to affected government)', 'in kind - search and rescue team (7 dogs + 11 canine search experts) plus 6 civil protection technical staff with localization material to Haiti', 'Luxembourg')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72150, 'OTM', 'Emergency relief', 'Luxembourg')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72150, 'Red Cross', 'Emergency relief', 'Luxembourg')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72150, 'CARITAS', 'Emergency relief', 'Luxembourg')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 144300, 'CARE International', 'Emergency relief', 'Luxembourg')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 290000, 'WFP', 'Emergency relief', 'Luxembourg')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'UNICEF', 'Awaiting allocation to specific projects', 'Major League Baseball')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'MCC', 'Immediate needs', 'Mennonite Central Committee')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Mercy Corps', 'in kind - team to assess what the most pressing needs are in the earthquake-affected areas', 'Mercy Corps')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 15 to 20 tons of aid a day; hundreds of doctors, rescue workers, engineers and civil protection staff', 'Mexico')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 45,000 tons of aid to help earthquake-hit Haiti', 'Mexico')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(8000000, 0, 'UN Agencies', 'Assistance to be channeled through UN Agencies', 'Mexico')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1250000, 0, 'Various', 'Cash and in-kind contributions awaiting allocation to specific projects', 'Microsoft')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72150, 'IFRC', 'Humanitarian assistance (No22.14-201003903)', 'Monaco')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'Bilateral (to affected government)', 'In kind - medical and pharmaceutical products products', 'Morocco')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 120000, 'Muslim Aid', 'To provide much needed clean water, emergency shelters, medicines and food aid to the earthquake victims', 'Muslim Aid')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(242520, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'National Bank of Canada')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Various', 'Relief efforts for victims', 'National Basketball Association')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'PIH', 'Relief and recovery efforts to assist victims of earthquake', 'National Football League')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'American RC', 'Relief and recovery efforts to assist victims of earthquake', 'National Football League')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'UN Agencies, NGOs and Red Cross', 'Awaiting allocation to specific projects', 'NEM Insurance Company')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Various', 'In kind contribution in bottled water products', 'Nestle')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 60-member team with trained sniffer dogs', 'Netherlands')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2886003, 'UN Agencies, NGOs and Red Cross', 'Emergency aid', 'Netherlands')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(719942, 0, 'UN Agencies and Red Cross', 'International relief efforts following the devastating earthquake in Haiti', 'New Zealand')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.3ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - special brigade to repair electric power lines that have been damaged by the earthquake; 31 military doctors of the Humanitarian Rescue Unit (URH) and humanitarian aid for the victims', 'Nicaragua')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250000, 0, 'American RC', 'Aid to victims of earthquake', 'Northern Trust Corporation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 866551, 'NRC', 'in kind - secondments to the UN', 'Norway')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1126516, 'Direktoratet for samfunnssikkerhet og beredskap', 'in kind - staff support to the UN', 'Norway')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1213172, 'Norway RC', 'Field hospital', 'Norway')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1733102, 'NCA', 'in kind - tents and water equipments', 'Norway')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'PIH', 'Medical services for victims', 'Not on our Watch')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'Bilateral (to affected government)', 'Emergency relief', 'Organization of American States')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'PADF', 'in kind - additional experts to assist in the relief efforts; Shelter kits with tents, tarps, water purification tablets; Emergency relief supplies; Food; Medical supplies; Family tool kits, including shovels; Telecommunications equipment', 'Pan American Development Foundation')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - all the infrastructure required for the logistical coordination of cooperation that should be sent to Haiti; cargo plane carrying 22 rescue workers and four sniffer dogs, as well as 15 tons of food and medical supplies.', 'Panama')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1000000, 0, 'Various', 'Aviating allocation to specific projects', 'Pepsi')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 54 tons of food and medicine to Haiti following Tuesday´s major earthquake in the island state', 'Peru')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - send medical teams in the quake-shattered Haiti.', 'Philippines')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'Plan', 'To be allocated to specific projects', 'Plan International')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(1600000, 0, 'Plan UK', 'To provide water, food, hygiene packs and counselling to children and adults in the various makeshift camps in Port-Au-Prince, Jacmel and other quake-affected regions of the devastated Caribbean island', 'Plan UK')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Group of 54 rescuers as well as 10 specially trained dogs plus 4 tonnes of equipment', 'Poland')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50505, 'ICRC', 'Assistance to population affected by earthquake (1/2010)', 'Poland')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1038961, 'Bilateral (to affected government)', 'In kind - Humanitarian assistance to the victims of the earthquake through rescue and health personal (2/2010)', 'Poland')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'UN Agencies, NGOs and Red Cross', 'To be allocated to specific projects', 'Presbyterian Disaster Assistance')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'NC/USA', 'Private contribution (Alyssa Milano)', 'Private (individuals & organisations)')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 114025, 'WFP', 'Food aid', 'Private (individuals & organisations)')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250000, 'PIH', 'Humanitarian assistance (from Madonna)', 'Private (individuals & organisations)')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 480000, 'BA', 'Rescue effort in Haiti from British Airways Change for Good programme, which is funded through onboard donations by passengers.', 'Private (individuals & organisations)')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'MSF', 'Humanitarian assistance (private contribution Sandra Bullock)', 'Private (individuals & organisations)')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1500000, 'American RC', 'Assistance for relief efforts (private contribution from Giselle Bundchen)', 'Private (individuals & organisations)')[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Various', 'Two million packets of PUR water purifier to be distributed through its Children´s Safe Drinking Water partners', 'Procter & Gamble Inc.')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 250000, 'Various', 'Support to Partners in Health and other relief organizations', 'Rogers Communications')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 700000, 'Bilateral (to affected government)', 'in kind - Deploy Global Radius technology in the affected region (one cargo aircraft with BO-194 or BK-117 helicopters onboard) to support deployment of field mission of UNDAC and to assess the consequences of the disaster and conduct search, rescue and evacuation operations', 'Russian Federation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'Various', 'Emergency relief', 'Safeway Inc')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'Various', 'Emergency relief', 'Safeway Inc')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 139300, 'SC', 'To be allocated to specific projects', 'Save the Children')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(242520, 0, 'UN Agencies and NGOs (details not yet provided)', 'To be allocated to specific projects', 'Scotiabank')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(50000, 0, 'ERF (OCHA)', 'In support of the international communitys humanitarian relief efforts for earthquake-hit Haiti.', 'Singapore')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 72150, 'IFRC', 'Emergency relief after earthquake', 'Slovenia')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(133333, 0, 'Bilateral (to affected government)', 'Relief effort in Haiti', 'South Africa')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - A team of 40 experts in rescue operations and dogs;A plane with a team of doctors and health specialists, and another plane with medical equipment are departing from Madrid on Jan 14. 50T of humanitarian aid (tents, blankets, medical kits, water and sanitation material, etc.)', 'Spain')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 4329004, 'Bilateral (to affected government)', 'Emergency aidHumanitarian assistance to the victims of the earthquake through rescue and health personal and provision and distribution of shelters, hygiene kits, water and complementary supplies,sanitary modules, medicines and medical supplies', 'Spain')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.2ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Spanish RC', 'in kind - relief materials kitchen kits, jerry cans, vehicles to facilitate access', 'Spanish Red Cross')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 400000, 'Oxfam America', 'Earthquake relief', 'State Street Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Provide military and police personnel for Haiti; filling four (4) feet container with drinking water, blankets and rice to provide assistance in the initial stages', 'Suriname')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(278940, 0, 'Church of Sweden', 'emergency operations', 'Sweden')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(13947001, 0, 'UN Agencies', 'to be allocated to specific agencies, projects,sectors', 'Sweden')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 61848, 'MSB', 'IT experts to assist the UNDAC', 'Sweden')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 687202, 'RC/Sweden', 'Urgent Relief', 'Sweden')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 836820, 'ERF (OCHA)', 'ERRF for Haiti (OCT 2484)', 'Sweden')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 2370049, 'MSB', 'Urgent Relief', 'Sweden')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - dispatched an inter-disciplinary expert team (7 persons) to carry out a needs-assessment and a second team with 10 experts in the fields of water and sanitation, health and shelter. A freight plane with 40 t in-kind urgent humanitarian assistance (shelter material, medicine and medical material, emergency kits) is planned to leave on 15-01-2010.', 'Switzerland')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1941748, 'Bilateral (to affected government)', 'Emergency aid', 'Switzerland')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - rescue team', 'Taiwan (Province of China)')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(5000000, 0, 'Bilateral (to affected government)', 'Humanitarian assistance', 'Taiwan (Province of China)')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'American RC', 'Aviating allocation to specific projects', 'Target')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(20000, 0, 'Bilateral (to affected government)', 'Humanitarian fund for Haiti in the wake of the powerful quake', 'Thailand')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(166666, 0, 'American RC', 'Aid to victims of earthquake', 'Toyota Motor Corporation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(166667, 0, 'MSF', 'Aid to victims of earthquake', 'Toyota Motor Corporation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(166667, 0, 'SC', 'Aid to victims of earthquake', 'Toyota Motor Corporation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Turkey RC', 'in kind - dispatched a team to Haiti, comprising an emergency management expert and a psychologist; various humanitarian assistance goods on the ground and distribute them to the people in need.', 'Turkey')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', '400,000 packs on instant rice, 30 tons of corn meal, 50,000 blankets, 10,000 boxes bottled water, 150,000 anti-inflammatories, 5,000 body bags, other canned food and medical supplies', 'Tzu Chi Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 101156, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/Canada')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/Korea (Republic of)')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 34662, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/Norway')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 320000, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/United Kingdom')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'UNICEF', 'Humanitarian response (SM099906)', 'UNICEF National Committee/USA (US Fund for UNICEF)')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(500000, 0, 'WFP', 'Awaiting allocation to specific project/sector', 'Unilever')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'Provision of sheltering materials to the people who lost their homes', 'United Arab Emirates')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - 64-strong UK search and rescue team with heavy lifting equipment', 'United Kingdom')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(8467168, 0, 'UN Agencies and NGOs (details not yet provided)', 'Humanitarian relief work in Haiti', 'United Kingdom')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 96476, 'CHASE OT', 'Humanitarian Assesment (201483-102)', 'United Kingdom')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1607937, 'IFRC', 'Immediate Humanitarian Relief (201483-107)', 'United Kingdom')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 1000000, 'Various', 'To address urgent humanitarian and reconstruction needs', 'United Nations Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - teams including up to 72 people, six search and rescue dogs and up to 48 tons of rescue equipment; USAID disaster experts who will help assess the situation in Haiti.', 'United States of America')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(45400428, 0, 'UN Agencies, NGOs and Red Cross', 'Earthquake relief efforts in Haiti (unallocated balance from orig pledge of US$100 mn.)', 'United States of America')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 49572, 'USAID', 'Administrative costs', 'United States of America')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'USAID', 'Initial assistance for the implemetnation of an emergency response program', 'United States of America')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 13000000, 'USDHHS', 'Health (USAID/OFDA)', 'United States of America')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 18000000, 'WFP', 'Food aid', 'United States of America')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 23500000, 'USFEMA', 'Search and rescue (USAID/OFDA)', 'United States of America')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'UN Agencies, NGOs and Red Cross', 'In-kind services for shipment of needed supplies', 'UPS Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'UN Agencies, NGOs and Red Cross', 'Relief supplies', 'UPS Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.2ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - rescue team of 5 military staff and 5 specialized canines', 'Uruguay')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 0, 'Bilateral (to affected government)', 'in kind - C-130 plane with 49 people on board and 14 tons of tools, medicine, potable water, and non-perishable food items; a team of doctors, rescue workers, military and firemen to help with the search and rescue efforts', 'Venezuela')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'WV', 'Aid for the victims of earthquake', 'Verizon Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 50000, 'Food for the Poor', 'Aid for the victims of earthquake', 'Verizon Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 40000, 'BRCS', 'Support immediate needs, including clean water, sanitation, healthcare and shelter', 'Vodafone Foundation')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'American RC', 'in kind - pre-packaged food kits', 'Walmart Foundation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 500000, 'American RC', 'Emergency relief efforts in Haiti', 'Walmart Foundation')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(0, 100000, 'American RC', 'Humanitarian aid', 'Walt Disney Corporation')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000, 0, 'American RC', 'To be allocated to specific projects', 'Wells Fargo & CO')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDonation Create (0.1ms)[0m   [0mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(250000, 0, 'UN Agencies, NGOs and Red Cross', 'To be allocated to specific projects', 'Western Union Foundation')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDonation Create (0.1ms)[0m   [0;1mINSERT INTO `donations` (`pledged`, `committed`, `channel`, `desc`, `donor`) VALUES(100000000, 0, 'Bilateral (to affected government)', 'Emergency aid', 'World Bank')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100118145153')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `donations`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `donations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `donations`[0m
